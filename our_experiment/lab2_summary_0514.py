@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 # flake8:noqa
-# Prompt: python，
-# ，`_2c__`,`0510_2c_ly_2`.csv，`intra_wcet.csv``wceet.csv`。0510，，`summary.csv``assoc=`,`assoc=2`，`ly``intra_wcet.csv`，intra_wcet.csv4、6、8，`summary.csv`，`zw``our``wceet.csv``summary.csv`4、6、8。。
-# Prompt，
+
 
 import os
 import re

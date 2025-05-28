@@ -111,7 +111,7 @@ import resource
 
 # （：GB）
 MAX_MEMORY_PER_PROCESS_GB = 2
-MAX_THREAD_HYPER = 64
+MAX_THREAD_HYPER = 12
 
 def set_memory_limit():
     """"""

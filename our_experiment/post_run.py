@@ -469,7 +469,7 @@ if __name__ == "__main__":
     
     # 
     output_md = os.path.join(output_dir, "rwinfo_summary.md")
-    output_md_u = os.path.join(output_dir, "rwinfo_summar_u.md")
+    output_md_u = os.path.join(output_dir, "rwinfo_summary_u.md")
     output_interference_csv = os.path.join(output_dir, "wceet.csv")
     output_total_csv = os.path.join(output_dir, "total_wcet.csv")
     output_intra_csv = os.path.join(output_dir, "intra_wcet.csv")
@@ -480,8 +480,8 @@ if __name__ == "__main__":
     all_stats, all_stats_u, intra_times, inter_times, all_functions, stat_data = scan_directory(root_directory, args.multicore)
     
     #  Markdown 
-    generate_markdown(all_stats, output_md)
-    generate_markdown(all_stats_u, output_md_u)
+    # generate_markdown(all_stats, output_md)
+    # generate_markdown(all_stats_u, output_md_u)
     
     # ResultCSV
     generate_interference_csv(intra_times, inter_times, all_functions, 
@@ -519,11 +519,10 @@ if __name__ == "__main__":
     if stat_data:
         generate_statistics_csv(stat_data, all_functions, 
                                output_stat_inter_csv, output_stat_total_csv)
-        print(f"- : {output_stat_inter_csv}")
-        print(f"- : {output_stat_total_csv}")
+        print(f"inter analysis runtime: {output_stat_inter_csv}")
+        print(f"total analysis runtime: {output_stat_total_csv}")
     
-    print(f"，:")
-    print(f"- RWInfo : {output_md}")
-    print(f"- : {output_interference_csv}")
-    print(f"- : {output_total_csv}")
-    print(f"- : {output_intra_csv}")
+    # print(f"cache access infomation : {output_md}")
+    print(f"inter analysis result: {output_interference_csv}")
+    print(f"intra analysis result: {output_intra_csv}")
+    print(f"total result: {output_total_csv}")

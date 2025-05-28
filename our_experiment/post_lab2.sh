@@ -1,13 +1,12 @@
 #!/bin/bash
 
 TEST_NUM="0515"
-# （）
-echo "=====  ====="
+echo "=========="
 # ./lab2.py -s lab2/${TEST_NUM}_2c_ly_2 -p -ops options/lab2_l1_82.txt -m liangy -a 2
 ./post_run.py -s lab2/${TEST_NUM}_2c_ly_2 -t lab2/${TEST_NUM}_2c_ly_2 -m liangy
-echo "=====  ====="
+echo "=========="
 
-# 8（）
+
 commands=(
     # "./lab2.py -s lab2/${TEST_NUM}_2c_zw_2 -p -ops options/lab2_l1_82.txt -m zhangw -a 2"
     # "./lab2.py -s lab2/${TEST_NUM}_2c_our_2 -p -ops options/lab2_l1_82.txt -m our -a 2"
@@ -27,10 +26,9 @@ commands=(
     "./post_run.py -s lab2/${TEST_NUM}_2c_our_8 -t lab2/${TEST_NUM}_2c_our_8 -m our"
 )
 
-# ，
 for i in "${!commands[@]}"; do
     eval "${commands[$i]}" > "lab2_post_$i.log" 2>&1 &
     echo " $i: ${commands[$i]}"
 done
 
-echo "， lab2_post_[0-8].log "
+echo "result in lab2_post_[0-8].log "
