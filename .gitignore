@@ -91,7 +91,6 @@ doc/
 *.nav
 *.out
 *.snm
-*.pdf
 *.toc
 *.vrb
 *.swp
@@ -105,11 +104,3 @@ doc/
 *.sopcinfo
 *.rpt
 **/tags
-# Ignore all build directories within the testcase benchmarks
-testcases/Benchmarks/**/build
-testcases/Benchmarks/**/tags_s
-testcases/regressions/
-testcases/evaluations*/
-testcases/out.log
-testcases/dirforgdb
-testcase/*
